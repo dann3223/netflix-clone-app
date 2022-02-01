@@ -15,6 +15,9 @@ module.exports = {
     },
     screens: {
       'littlesm': '550px',
+      'md': '758px',
+      'littlelg': '950px',
+      'littlexl': '1200px',
     },
   },
   plugins: [],
