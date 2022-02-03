@@ -14,7 +14,7 @@ const Login = () => {
 
   if (session) {
     return (
-      <>
+      <div className='h-screen'>
         <div className='bg-[#141414] text-white h-screen'>
           <div className='relative w-[75px] h-[20px] top-5 left-3 cursor-pointer littlesm:w-[108px] littlesm:h-[29.2px] littlelg:w-[134px] littlelg:h-[36px]'>
             <Link href='/login' passHref>
@@ -65,11 +65,11 @@ const Login = () => {
             </Link>
           </section>
         </div>
-      </>
+      </div>
     )
   }
   return (
-    <>
+    <div className='h-screen'>
     <div className='bg-black text-white'>
       <div className='relative w-[75px] h-[20px] top-5 left-3 cursor-pointer littlesm:w-[108px] littlesm:h-[29.2px] littlelg:w-[134px] littlelg:h-[36px]'>
         <Link href='/' passHref>
@@ -104,7 +104,7 @@ const Login = () => {
         </ul>
       </footer>
     </div>
-    </>
+    </div>
   )
 };
 
