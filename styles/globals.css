@@ -8,6 +8,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-color: black;
+}
+
 .main-background {
   background-image: url('../public/background.png');
   background-position: top;
