@@ -14,3 +14,12 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media (min-width: 758px) {
+  .browse-background {
+    background-image: url('../public/jordan.jpg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

@@ -13,6 +13,7 @@ export default function Home() {
     <>
     <Head>
       <title>Netflix Clone</title>
+      <link rel="shortcut icon" href='/netflixlogo.svg' />
     </Head>
     <div className='text-white'>
       <main className='main-background flex flex-col justify-center items-center px-3 littlesm:px-12 littlelg:px-16'>

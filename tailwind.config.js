@@ -18,6 +18,7 @@ module.exports = {
       'md': '758px',
       'littlelg': '950px',
       'littlexl': '1200px',
+      'maxsize': '1444px',
     },
   },
   plugins: [],

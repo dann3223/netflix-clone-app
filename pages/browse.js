@@ -41,21 +41,22 @@ const Browse = () => {
   }
 
   return (
-    <div>
-      <div className='bg-[#141414] text-white'>
-        <nav className='grid grid-cols-4 place-items-center bg-black bg-opacity-50 pb-6 sticky top-0 z-20'>
+    <div className='bg-black'>
+      <div className='bg-[#141414] text-white md:bg-black max-w-screen-maxsize mx-auto'>
+        <div className='browse-background'>
+        <nav className='grid grid-cols-4 place-items-center bg-black bg-opacity-50 pb-6 sticky top-0 z-20 md:bg-opacity-0'>
           <div
             onClick={handleNav} 
             className='place-self-start w-[24px] h-[24px] relative top-3 left-6 cursor-pointer littlesm:w-[28px] littlesm:h-[28px] littlelg:w-[36px] littlelg:h-[36px]'>
             <Image src={burger} alt='' layout='fill' />
           </div>
-          <div className='w-[75px] h-[20px] place-self-start relative top-3 cursor-pointer littlesm:w-[108px] littlesm:h-[29.2px] littlelg:w-[134px] littlelg:h-[36px]'>
+          <div className='w-[75px] h-[20px] place-self-start relative top-3 cursor-pointer littlesm:right-16 md:right-28 littlelg:right-40 littlexl:right-56 littlesm:w-[108px] littlesm:h-[29.2px] littlelg:w-[134px] littlelg:h-[36px]'>
             <Link href='/browse' passHref>
               <Image src={netflix} alt='' layout='fill' />
             </Link>
           </div>
-          <div className='relative top-3 col-span-2 place-self-center'>
-            <input type="text" placeholder='Search' value={search} onChange={handleSearch} className='bg-[#141414] border-[1px] border-[#C4C4C4] outline-none w-28 pl-2' />
+          <div className='relative top-3 col-span-2 place-self-center w-full grid place-items-center'>
+            <input type="text" placeholder='Search' value={search} onChange={handleSearch} className='bg-[#141414] border-[1px] border-[#C4C4C4] outline-none w-10/12 pl-2 md:place-self-start md:w-8/12' />
           </div>
         </nav>
         
@@ -93,148 +94,264 @@ const Browse = () => {
         : <></>
         }
 
-        <main className='text-footer font-bold text-lg pl-6 pt-2 pb-10 flex flex-col gap-10 over'>
-          <div className=''>
-            <h4>Trends</h4>
-            <Swiper
-              spaceBetween={130}
-              slidesPerView={3}
-            >
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={suits} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={bojack} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={demonslayer} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={peakyblinders} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <div>
-            <h4>TV Shows</h4>
-            <Swiper
-              spaceBetween={130}
-              slidesPerView={3}
-            >
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={breakingbad} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={bettercallsaul} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={seinfeld} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={sexeducation} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <div>
-            <h4>Movies</h4>
-            <Swiper
-              spaceBetween={130}
-              slidesPerView={3}
-            >
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={forrestgump} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={minions} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={rango} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={madagascar} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <div>
-            <h4>Only on Netflix</h4>
-            <Swiper
-              spaceBetween={130}
-              slidesPerView={3}
-            >
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={blackmirror} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={lacasa} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={alteredcarbon} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={closeenough} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <div>
-            <h4>Comedies</h4>
-            <Swiper
-              spaceBetween={130}
-              slidesPerView={3}
-            >
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={community} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={howtosell} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={arrested} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative w-[140px] h-[80px]'>
-                  <Image src={atlanta} alt='' layout='fill' />
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
+        <main className='text-footer font-bold text-lg pt-2 pb-10 flex flex-col gap-10 md:pt-72 md:pt-96'>
+            <div className='pl-6'>
+              <h4>Trends</h4>
+              <Swiper
+                breakpoints={{
+                  320: {
+                    width: 320,
+                    slidesPerView: 3,
+                    spaceBetween: 110,
+                  },
+                  550: {
+                    width: 550,
+                    slidesPerView: 3,
+                    spaceBetween: -60,
+                  },
+                  758: {
+                    width: 758,
+                    slidesPerView: 3,
+                    spaceBetween: -50,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={suits} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={bojack} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={demonslayer} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={peakyblinders} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className='hidden littlelg:inline'>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={breakingbad} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className='hidden littlelg:inline'>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={bettercallsaul} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className='hidden littlelg:inline'>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={seinfeld} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className='hidden littlelg:inline'>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={sexeducation} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <div className='pl-6 littlelg:hidden'>
+              <h4>TV Shows</h4>
+              <Swiper
+                breakpoints={{
+                  320: {
+                    width: 320,
+                    slidesPerView: 3,
+                    spaceBetween: 110,
+                  },
+                  550: {
+                    width: 550,
+                    slidesPerView: 3,
+                    spaceBetween: -60,
+                  },
+                  758: {
+                    width: 758,
+                    slidesPerView: 3,
+                    spaceBetween: -50,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={breakingbad} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={bettercallsaul} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={seinfeld} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={sexeducation} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <div className='pl-6 littlelg:hidden'>
+              <h4>Movies</h4>
+              <Swiper
+                breakpoints={{
+                  320: {
+                    width: 320,
+                    slidesPerView: 3,
+                    spaceBetween: 110,
+                  },
+                  550: {
+                    width: 550,
+                    slidesPerView: 3,
+                    spaceBetween: -60,
+                  },
+                  758: {
+                    width: 758,
+                    slidesPerView: 3,
+                    spaceBetween: -50,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={forrestgump} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={minions} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={rango} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={madagascar} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <div className='pl-6'>
+              <h4>Only on Netflix</h4>
+              <Swiper
+                breakpoints={{
+                  320: {
+                    width: 320,
+                    slidesPerView: 3,
+                    spaceBetween: 110,
+                  },
+                  550: {
+                    width: 550,
+                    slidesPerView: 3,
+                    spaceBetween: -60,
+                  },
+                  758: {
+                    width: 758,
+                    slidesPerView: 3,
+                    spaceBetween: -50,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={blackmirror} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={lacasa} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={alteredcarbon} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={closeenough} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className='hidden littlelg:inline'>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={community} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className='hidden littlelg:inline'>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={howtosell} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className='hidden littlelg:inline'>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={arrested} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className='hidden littlelg:inline'>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={atlanta} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <div className='pl-6 littlelg:hidden'>
+              <h4>Comedies</h4>
+              <Swiper
+                breakpoints={{
+                  320: {
+                    width: 320,
+                    slidesPerView: 3,
+                    spaceBetween: 110,
+                  },
+                  550: {
+                    width: 550,
+                    slidesPerView: 3,
+                    spaceBetween: -60,
+                  },
+                  758: {
+                    width: 758,
+                    slidesPerView: 3,
+                    spaceBetween: -50,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={community} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={howtosell} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={arrested} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='relative w-[140px] h-[80px] littlesm:w-[162px] littlesm:h-[92px] md:w-[234px] md:h-[133px]'>
+                    <Image src={atlanta} alt='' layout='fill' />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
         </main>
+        </div>
       </div>
     </div>
   );
