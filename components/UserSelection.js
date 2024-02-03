@@ -23,7 +23,7 @@ export const UserSelection = () => {
 				</h3>
 				<div className="grid grid-cols-2 gap-x-2 gap-y-8 pt-6 littlesm:gap-x-4 md:grid-cols-5">
 					<Link href="/browse" passHref>
-						<div className="bg-gray w-20 h-20 rounded-lg relative littlelg:w-24 littlelg:h-24 littlexl:w-36 littlexl:h-36 hover:ring-4 hover:ring-white">
+						<div className="bg-gray w-20 h-20 rounded-lg relative littlelg:w-24 littlelg:h-24 littlexl:w-36 littlexl:h-36 hover:ring-4 hover:ring-white cursor-pointer">
 							<Image
 								src={usuario2}
 								alt=""
@@ -37,7 +37,7 @@ export const UserSelection = () => {
 					</Link>
 
 					<Link href="/browse" passHref>
-						<div className="bg-gray w-20 h-20 rounded-lg relative littlelg:w-24 littlelg:h-24 littlexl:w-36 littlexl:h-36 hover:ring-4 hover:ring-white">
+						<div className="bg-gray w-20 h-20 rounded-lg relative littlelg:w-24 littlelg:h-24 littlexl:w-36 littlexl:h-36 hover:ring-4 hover:ring-white cursor-pointer">
 							<Image
 								src={usuario1}
 								alt=""
@@ -51,7 +51,7 @@ export const UserSelection = () => {
 					</Link>
 
 					<Link href="/browse" passHref>
-						<div className="bg-gray w-20 h-20 rounded-lg relative littlelg:w-24 littlelg:h-24 littlexl:w-36 littlexl:h-36 hover:ring-4 hover:ring-white">
+						<div className="bg-gray w-20 h-20 rounded-lg relative littlelg:w-24 littlelg:h-24 littlexl:w-36 littlexl:h-36 hover:ring-4 hover:ring-white cursor-pointer">
 							<Image
 								src={usuario3}
 								alt=""
@@ -65,7 +65,7 @@ export const UserSelection = () => {
 					</Link>
 
 					<Link href="/browse" passHref>
-						<div className="bg-gray w-20 h-20 rounded-lg relative littlelg:w-24 littlelg:h-24 littlexl:w-36 littlexl:h-36 hover:ring-4 hover:ring-white">
+						<div className="bg-gray w-20 h-20 rounded-lg relative littlelg:w-24 littlelg:h-24 littlexl:w-36 littlexl:h-36 hover:ring-4 hover:ring-white cursor-pointer">
 							<Image
 								src={usuario4}
 								alt=""
@@ -79,7 +79,7 @@ export const UserSelection = () => {
 					</Link>
 
 					<Link href="/browse" passHref>
-						<div className="bg-gray w-20 h-20 rounded-lg relative littlelg:w-24 littlelg:h-24 littlexl:w-36 littlexl:h-36 hover:ring-4 hover:ring-white">
+						<div className="bg-gray w-20 h-20 rounded-lg relative littlelg:w-24 littlelg:h-24 littlexl:w-36 littlexl:h-36 hover:ring-4 hover:ring-white cursor-pointer">
 							<Image
 								src={usuario5}
 								alt=""

@@ -17,12 +17,12 @@ export const SignIn = ({ handleSignIn }) => {
 					onClick={handleSignIn}
 					className="font-bold text-lg py-3 bg-red w-full rounded-md mt-4"
 				>
-					Sign In with Google
+					Sign In
 				</button>
 				<div className="flex w-full justify-between text-footer text-sm mt-2">
 					<div className="flex items-center">
 						<input type="checkbox" name="remember" id="remember" />
-						<label htmlFor="remember" className="pl-1">
+						<label htmlFor="remember" className="pl-1 cursor-pointer">
 							Remember me
 						</label>
 					</div>
